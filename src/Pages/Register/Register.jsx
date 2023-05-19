@@ -101,8 +101,8 @@ const Register = () => {
       {error && <p className='text-center text-error mb-2'>{error}</p>}
       <p className='text-center'>Already have an account? <Link to='/login' className='text-warning underline'>Login</Link></p>
       <div className=" social-button-container grid grid-rows-2 justify-items-center w-50 mt-3">
-        <div onClick={handleGoogle} className="">
       <p>_____________or_______________</p>
+        <div onClick={handleGoogle} className="">
           <img
 
             className=" social-button"

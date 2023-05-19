@@ -86,9 +86,9 @@ const Login = () => {
             </div>
             {error && <p className='text-center text-error mb-2'>{error}</p>}
             <p className='text-center'>Don't have an account? <Link to='/register' className='text-warning underline'>Create an account</Link></p>
+            <p>_____________or_______________</p>
             <div className=" social-button-container grid grid-rows-2 justify-items-center w-50 ">
                 <div onClick={handleGoogle} className="">
-            <p>_____________or_______________</p>
                     <img 
 
                         className=" social-button"
@@ -102,8 +102,8 @@ const Login = () => {
         </form>
          <div className="col-md-6">
          <img
-           className="w-100"
-           src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=826&t=st=1683184761~exp=1683185361~hmac=7b3ae2dbd8fdb1dc4ff88c5ff252efb77eb096c83292d5f05ed2090e8e0c86dd"
+           className="w-100 h-[600px]"
+           src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7883.jpg?w=826&t=st=1684473772~exp=1684474372~hmac=4dfa73d50d3b80f605921f72b7d66d3de3fb6ef4c0aa3c2288594fe5b9b00065"
            alt=""
          />
        </div>

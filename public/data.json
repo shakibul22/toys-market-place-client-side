@@ -1,0 +1,78 @@
+[
+    {
+      "name": "Math Toys",
+      "toys": [
+        {
+          "id": 1,
+          "name": "Counting Blocks",
+          "price": 19.99,
+          "rating": 4.5,
+          "image": "https://example.com/counting-blocks.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Math Puzzle Set",
+          "price": 24.99,
+          "rating": 4.2,
+          "image": "https://example.com/math-puzzle.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Language Toys",
+      "toys": [
+        {
+          "id": 3,
+          "name": "Alphabet Flashcards",
+          "price": 12.99,
+          "rating": 4.8,
+          "image": "https://example.com/alphabet-flashcards.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Word Building Blocks",
+          "price": 29.99,
+          "rating": 4.6,
+          "image": "https://example.com/word-building-blocks.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Engineering Toys",
+      "toys": [
+        {
+          "id": 5,
+          "name": "Building Blocks Set",
+          "price": 39.99,
+          "rating": 4.7,
+          "image": "https://example.com/building-blocks.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Robotics Kit",
+          "price": 59.99,
+          "rating": 4.4,
+          "image": "https://example.com/robotics-kit.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Science Toys",
+      "toys": [
+        {
+          "id": 7,
+          "name": "Microscope Set",
+          "price": 49.99,
+          "rating": 4.9,
+          "image": "https://example.com/microscope-set.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Chemistry Experiment Kit",
+          "price": 34.99,
+          "rating": 4.3,
+          "image": "https://example.com/chemistry-kit.jpg"
+        }
+      ]
+    }
+  ]

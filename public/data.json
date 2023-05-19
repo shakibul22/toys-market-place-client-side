@@ -1,7 +1,9 @@
 [
     {
-      "name": "Math Toys",
-      "toys": [
+      "id": "01",
+      "title": "Mathematical Toys",
+      "img": "https://i.ibb.co/5MvmD2g/88.jpg",
+      "catagory": [
         {
           "id": 1,
           "name": "Counting Blocks",
@@ -19,8 +21,10 @@
       ]
     },
     {
-      "name": "Language Toys",
-      "toys": [
+      "id": "02",
+      "title": "Language Toys",
+      "img": "https://i.ibb.co/5MvmD2g/88.jpg",
+      "catagory": [
         {
           "id": 3,
           "name": "Alphabet Flashcards",
@@ -38,8 +42,10 @@
       ]
     },
     {
-      "name": "Engineering Toys",
-      "toys": [
+      "id": "03",
+      "title": "Engineering Toys",
+      "img": "https://i.ibb.co/5MvmD2g/88.jpg",
+      "catagory": [
         {
           "id": 5,
           "name": "Building Blocks Set",
@@ -57,8 +63,10 @@
       ]
     },
     {
-      "name": "Science Toys",
-      "toys": [
+      "id": "04",
+      "title": "Science Toys",
+      "img": "https://i.ibb.co/5MvmD2g/88.jpg",
+      "catagory": [
         {
           "id": 7,
           "name": "Microscope Set",

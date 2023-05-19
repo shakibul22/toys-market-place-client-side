@@ -6,41 +6,52 @@ import Main from "../Layouts/Main";
 import Register from "../Pages/Register/Register";
 import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import AddToy from "../Pages/AddToy/AddToy";
+import PrivateRoute from "./PrivateRoute";
+import MyToys from "../Pages/MyToys/MyToys";
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Main></Main>,
-      errorElement:<ErrorPage></ErrorPage>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        }, 
-        {
-            path: 'login', 
-            element: <Login></Login>
-        }, 
-        {
-            path: 'register', 
-            element: <Register></Register>
-        },
-        {
-            path: 'blog', 
-            element: <Blog></Blog>
-        },
-    ]
-},
+        path: "/",
+        element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
+                path: 'login',
+                element: <Login></Login>
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
+            },
+            {
+                path: 'blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: 'addToy',
+                element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
+            },
+            {
+                path: 'myToys',
+                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+            }
+        ]
+    },
 ]);
 
 
 export default router;
 // {
-//   path: 'book/:id', 
-//   element: <BookService></BookService>, 
+//   path: 'book/:id',
+//   element: <BookService></BookService>,
 //   loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
 // },
 // {
-//   path: 'bookings', 
+//   path: 'bookings',
 //   element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
 // }

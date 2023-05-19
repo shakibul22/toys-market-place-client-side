@@ -10,7 +10,7 @@ const Banner = () => {
                 <div className="bg-center bg-no-repeat bg-[url('https://cdn11.bigcommerce.com/s-bfc1cbi7hy/images/stencil/original/carousel/7/slider-02.jpg?c=1')] ">
                     <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl ">Welcome To Our Kid's Zone</h1>
-                        <p className="mb-8 text-lg font-normal text-blue-500 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                        <p className="mb-8 text-lg font-normal text-blue-500 lg:text-xl sm:px-16 lg:px-48">Here at Kid's Zone, we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                             <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                                 Discover More
@@ -31,7 +31,7 @@ const Banner = () => {
                 <div className="bg-center bg-no-repeat bg-[url('https://cdn11.bigcommerce.com/s-bfc1cbi7hy/images/stencil/original/carousel/8/slider-01__62460.jpg?c=1')] ">
                     <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl ">Welcome To Our Kid's Zone</h1>
-                        <p className="mb-8 text-lg font-normal text-blue-500 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                        <p className="mb-8 text-lg font-normal text-blue-500 lg:text-xl sm:px-16 lg:px-48">Here at Kid's Zone, we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                             <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                                 Discover More
@@ -52,10 +52,10 @@ const Banner = () => {
             <div id="slide3" className="carousel-item relative w-full  ">
                <div className="bg-center bg-no-repeat bg-[url('https://toptoyusa.s3-accelerate.amazonaws.com/2019/06/81b-JNn2BzGL._SL1500_.jpg')]  ">
                     <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] h-full">
-                    <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
+                    <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-orange-400 md:text-5xl lg:text-6xl">
       Welcome To Our Kid's Zone
     </h1>
-                        <p className="mb-8 text-lg font-normal text-blue-500 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                        <p className="mb-8 text-lg font-normal text-sky-500 lg:text-xl sm:px-16 lg:px-48">Here at Kid's Zone, we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                             <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                                 Discover More

@@ -5,7 +5,7 @@ const NavBar = () => {
         <li><NavLink to='/blog'  className='text-white'>Blog</NavLink> </li>
     </>
     return (
-        <div className="navbar bg-pink-700">
+        <div className="navbar bg-cyan-900">
             <div className="navbar-start">
               <img src="https://cdn11.bigcommerce.com/s-bfc1cbi7hy/images/stencil/225x65/logo_1601701528__90522.original.png" alt="" />
 

@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import  { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import swal from 'sweetalert';
 const Register = () => {
-  const { user, createUser, googleUser, updateUserProfile } = useContext(AuthContext);
+  const { user, createUser, googleUser,  updateUserProfile } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -20,7 +21,7 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(name, email, password, photo);
-
+  
     createUser(email, password)
       .then((userCredential) => {
         // Signed in
@@ -28,30 +29,36 @@ const Register = () => {
         console.log(user);
         updateUserProfile(name, photo);
         navigate(from, { replace: true });
-
+  
         form.reset();
-
+  
+        // Display success alert
+        swal('Success', 'User created successfully!', 'success');
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
-        
+  
+        // Display error alert
+        swal('Error', errorMessage, 'error');
       });
   };
+  
 
 
   const handleGoogle = () => {
     googleUser()
       .then(result => {
         const googleUsed = result.user;
-        console.log(googleUsed);
+  
+        // Display success alert
+        swal('Success', 'Google login successful!', 'success');
       })
       .catch(error => {
-        console.log(error)
-      })
+  
+        // Display error alert
+        swal('Error', 'Google login failed!', 'error');
+      });
   };
-
-
 
   return (
 
@@ -64,7 +71,7 @@ const Register = () => {
         <label className="label">
           <span className="label-text">Name</span>
         </label>
-        <input  type="text" name='name' placeholder="Name" className="input input-bordered w-full" required />
+        <input onChange={(e) => setName(e.target.value)} type="text" name='name' placeholder="Name" className="input input-bordered w-full" required />
       </div>
       <div className="form-control">
         <label className="label">
@@ -101,8 +108,8 @@ const Register = () => {
       {error && <p className='text-center text-error mb-2'>{error}</p>}
       <p className='text-center'>Already have an account? <Link to='/login' className='text-warning underline'>Login</Link></p>
       <div className=" social-button-container grid grid-rows-2 justify-items-center w-50 mt-3">
-      <p>_____________or_______________</p>
         <div onClick={handleGoogle} className="">
+      <p>_____________or_______________</p>
           <img
 
             className=" social-button"
@@ -110,16 +117,9 @@ const Register = () => {
             alt=""
           />
         </div>
-      
+       
       </div>
     </form>
-     <div className="col-md-6">
-     <img
-       className="w-100"
-       src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7965.jpg?w=826&t=st=1683184979~exp=1683185579~hmac=a3fbecb0b235ca218a1331776d51a6229da1c3baf8eb01e0058f917acb0a7252"
-       alt=""
-     />
-   </div>
   </div>
 
 

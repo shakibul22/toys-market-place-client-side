@@ -4,12 +4,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 // import { toast } from 'react-hot-toast';
 import toast, { Toaster } from 'react-hot-toast';
+import swal from 'sweetalert';
 // import "./Login.css";
 // import { sendPasswordResetEmail } from 'firebase/auth';
 
 
 const Login = () => {
-    const { user, loginUser, googleUser } = useContext(AuthContext);
+    const { user,signIn, googleUser } = useContext(AuthContext);
     const [error, setError] = useState('')
     const navigate = useNavigate();
   const location = useLocation();
@@ -28,30 +29,36 @@ const Login = () => {
     }
  
 
-    const handleLogin = event => {
+    const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-
-        setError(null)
-
-        loginUser(email, password)
-            .then(result => {
-                const createdUser = result.user;
-                console.log(createdUser)
-                form.reset();
-                toast.success('Successfully Login!')
-
-                navigate(from, { replace: true });
-            })
-            .catch(error => {
-                setError(error.message)
-                console.log(error)
-            })
-
-    }
+      
+        setError(null);
+      
+        signIn(email, password)
+          .then((result) => {
+            const createdUser = result.user;
+            console.log(createdUser);
+            form.reset();
+            toast.success('Successfully Login!');
+      
+            navigate(from, { replace: true });
+      
+            // Display success alert
+            swal('Success', 'Login successful!', 'success');
+          })
+          .catch((error) => {
+            setError(error.message);
+            console.log(error);
+      
+            // Display error alert
+            swal('Error', error.message, 'error');
+          });
+      };
+      
 
    
     return (

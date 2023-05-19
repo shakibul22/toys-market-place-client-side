@@ -25,6 +25,7 @@ const NavBar = () => {
                     <li><NavLink to='/blog' className='text-blue-300'>Blog</NavLink> </li>
                     <li><NavLink to='/addToy' className='text-blue-300'>Add Toy</NavLink> </li>
                     <li><NavLink to='/myToys' className='text-blue-300'>My Toys</NavLink> </li>
+                    <li><NavLink to='/allToys' className='text-blue-300'>All Toys</NavLink> </li>
                        
                     </ul>
                 </div>
@@ -39,6 +40,8 @@ const NavBar = () => {
                     <li><NavLink to='/blog' className='text-white'>Blog</NavLink> </li>
                     <li><NavLink to='/addToy' className='text-white'>Add Toy</NavLink> </li>
                     <li><NavLink to='/myToys' className='text-white'>My Toys</NavLink> </li>
+                    <li><NavLink to='/allToys' className='text-white'>All Toys</NavLink> </li>
+
 
                 </ul>
             </div>

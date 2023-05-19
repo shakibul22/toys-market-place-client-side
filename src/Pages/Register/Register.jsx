@@ -107,9 +107,9 @@ const Register = () => {
       </div>
       {error && <p className='text-center text-error mb-2'>{error}</p>}
       <p className='text-center'>Already have an account? <Link to='/login' className='text-warning underline'>Login</Link></p>
+      <p className='text-center'>_____________or_______________</p>
       <div className=" social-button-container grid grid-rows-2 justify-items-center w-50 mt-3">
         <div onClick={handleGoogle} className="">
-      <p>_____________or_______________</p>
           <img
 
             className=" social-button"
@@ -120,6 +120,13 @@ const Register = () => {
        
       </div>
     </form>
+    <div className="col-md-6">
+         <img
+           className="w-100 h-[600px]"
+           src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg?w=826&t=st=1684523786~exp=1684524386~hmac=4a87de3ea7797226799d45b768a1f7ec8db1423bef8d38faffd8d65087cd5828"
+           alt=""
+         />
+       </div>
   </div>
 
 

@@ -2,11 +2,8 @@
 import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
-// import { toast } from 'react-hot-toast';
-import toast, { Toaster } from 'react-hot-toast';
 import swal from 'sweetalert';
-// import "./Login.css";
-// import { sendPasswordResetEmail } from 'firebase/auth';
+
 
 
 const Login = () => {
@@ -20,11 +17,13 @@ const Login = () => {
        googleUser()
        .then(result=>{
         const googleUsed=result.user;
+        swal('Success', 'Google login successful!', 'success');
+
         navigate(from, { replace: true });
-        console.log(googleUsed);
        })
        .catch(error => {
-        console.log(error)
+        swal('Error', 'Google login failed!', 'error');
+
     })
     }
  
@@ -69,7 +68,6 @@ const Login = () => {
                 <label  className="label">
                     <span className="label-text">Email</span>
                 </label>
-               <Toaster></Toaster>
                 <input type="email" name='email'  placeholder="email" className="input input-bordered" required />
             </div>
            

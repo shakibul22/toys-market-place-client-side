@@ -42,7 +42,6 @@ const Login = () => {
             const createdUser = result.user;
             console.log(createdUser);
             form.reset();
-            toast.success('Successfully Login!');
       
             navigate(from, { replace: true });
       

@@ -9,7 +9,26 @@ const Category = () => {
       name: 'Math Toys',
       toys: [
         {
-          picture: 'math-toy-1.jpg',
+          picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',
+          name: 'Math Toy 1',
+          price: '$19.99',
+          rating: 4.5,
+          details: '...',
+        },
+        {
+          picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',
+          name: 'Math Toy 2',
+          price: '$14.99',
+          rating: 4.2,
+          details: '...',
+        },
+      ],
+    },
+    {
+      name: 'Language Toys',
+      toys:  [
+        {
+          picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',
           name: 'Math Toy 1',
           price: '$19.99',
           rating: 4.5,
@@ -25,15 +44,22 @@ const Category = () => {
       ],
     },
     {
-      name: 'Language Toys',
-      toys: [
-        // Language toy objects go here
-      ],
-    },
-    {
       name: 'Engineering Toys',
-      toys: [
-        // Engineering toy objects go here
+      toys:  [
+        {
+          picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',
+          name: 'Math Toy 1',
+          price: '$19.99',
+          rating: 4.5,
+          details: '...',
+        },
+        {
+          picture: 'math-toy-2.jpg',
+          name: 'Math Toy 2',
+          price: '$14.99',
+          rating: 4.2,
+          details: '...',
+        },
       ],
     },
   ];
@@ -43,7 +69,8 @@ const Category = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center w-full h-full">
+      <h1 className="text-3xl text-pink-400 font-bold my-5">Shop by Category:</h1>
       <div className="flex mb-4">
         {categories.map((category, index) => (
           <button
@@ -57,9 +84,9 @@ const Category = () => {
           </button>
         ))}
       </div>
-      <div>
+      <div className="flex flex-wrap justify-center">
         {categories[activeTab].toys.map((toy, index) => (
-          <div key={index} className="flex items-center mb-4">
+          <div key={index} className="flex items-center  mb-4">
             <img
               src={toy.picture}
               alt={toy.name}

@@ -1,10 +1,8 @@
-import NavBar from "../../Shared/NavBar/NavBar";
 import Title from "../../Title/Title";
-import AllToys from "../AllToys/AllToys";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
-import Catagory from "../ToysCatagory/Catagory";
-import ToysCatagory from "../ToysCatagory/ToysCatagory";
+import Category from "../ToysCatagory/Catagory";
+
 
 const Home = () => {
     return (
@@ -13,7 +11,8 @@ const Home = () => {
 
             <Banner></Banner>
             <Gallery></Gallery>
-            <Catagory></Catagory>
+            <Category></Category>
+            {/* <AllToys></AllToys> */}
         </div>
     );
 };

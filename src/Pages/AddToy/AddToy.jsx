@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Title from '../Title/Title';
 
 const AddToy = () => {
+  const { user } = useContext(AuthContext);
   const [pictureUrl, setPictureUrl] = useState('');
   const [name, setName] = useState('');
   const [sellerName, setSellerName] = useState('');
@@ -11,8 +14,12 @@ const AddToy = () => {
   const [quantity, setQuantity] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleAddToy = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const date = form.date.value;
+    const email = user?.email;
 
     // Perform the submit logic here, e.g., send the form data to the server
     // You can access the form values using the state variables
@@ -27,12 +34,41 @@ const AddToy = () => {
     setRating('');
     setQuantity('');
     setDescription('');
+
+    const category = {
+      pictureUrl,
+      name,
+      sellerName,
+      sellerEmail,
+      subCategory,
+      price,
+      rating,
+      quantity,
+      description,
+    };
+
+    fetch('http://localhost:5000/category', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(category),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert('Added a Toy successfully');
+        }
+      });
   };
 
   return (
     <div className="container mx-auto p-4">
+    <Title title="Add Toy-Kid's Zone"></Title>
+
       <h1 className="text-2xl font-bold mb-4">Add A Toy</h1>
-      <form onSubmit={handleSubmit} className=" mx-auto grid grid-cols-2 gap-3">
+      <form onSubmit={handleAddToy} className=" mx-auto grid grid-cols-2 gap-3">
         <div className="mb-4">
           <label htmlFor="pictureUrl" className="block mb-1">
             Picture URL of the toy:
@@ -135,7 +171,7 @@ const AddToy = () => {
           </label>
           <textarea
             id="description"
-            className="w-full border border-gray-300 rounded px-3 py-2"
+            className="w-full border border-gray-300 rounded px-3"
             rows="4"
             value={description}
             onChange={(e) => setDescription(e.target.value)}

@@ -1,4 +1,5 @@
 import NavBar from "../../Shared/NavBar/NavBar";
+import Title from "../../Title/Title";
 import AllToys from "../AllToys/AllToys";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
@@ -8,6 +9,8 @@ import ToysCatagory from "../ToysCatagory/ToysCatagory";
 const Home = () => {
     return (
         <div>
+      <Title title="Home-Kid's Zone"></Title>
+
             <Banner></Banner>
             <Gallery></Gallery>
             <Catagory></Catagory>

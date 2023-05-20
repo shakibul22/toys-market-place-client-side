@@ -1,9 +1,13 @@
+import Title from "../Title/Title";
 
 
 const Blog = () => {
 
     return (
+       <div>
+         <Title title="Blog-Kid's Zone"></Title>
         <div className='text-start flex flex-col gap-6 shadow p-6 mb-8'>
+
             <div className='shadow p-5'>
                 <div className='shadow p-5'>
                     <h3 className='font-semibold mb-4  hover:text-success'>
@@ -39,6 +43,7 @@ const Blog = () => {
                 </div>
             </div>
         </div>
+       </div>
     );
 };
 

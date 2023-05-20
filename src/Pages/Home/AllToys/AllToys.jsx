@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
+import Title from '../../Title/Title';
 
 const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
@@ -13,6 +14,8 @@ const AllToys = () => {
 
   return (
     <div>
+         <Title title="Blogs-Kid's Zone"></Title>
+
       <div className="text-center mt-4">
         <h2 className="text-orange-500 text-3xl font-bold mb-4">Our Toys</h2>
         <p className="p-3">The majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>

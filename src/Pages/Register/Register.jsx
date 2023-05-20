@@ -2,6 +2,7 @@ import  { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import swal from 'sweetalert';
+import Title from '../Title/Title';
 const Register = () => {
   const { user, createUser, googleUser,  updateUserProfile } = useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -64,6 +65,7 @@ const Register = () => {
 
 
   <div className='flex flex-col md:flex-row sm:flex-col justify-content-center align-items-center '>
+    <Title title="Register-Kid's Zone"></Title>
       <form onSubmit={handleCreateUser} className="w-full md:w-[570px] mt-15 mb-10 p-10  bg-white rounded-lg text-black">
       <h3 className='text-2xl font-bold mb-5'>Create an account</h3>
       <div className="form-control">

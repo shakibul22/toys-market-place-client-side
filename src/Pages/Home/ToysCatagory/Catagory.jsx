@@ -7,6 +7,11 @@ const Category = () => {
   const categories = [
     {
       name: 'Math Toys',
+      picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',
+      name: 'Math Toy 1',
+      price: '$19.99',
+      rating: 4.5,
+      details: '...',
       toys: [
         {
           picture: 'https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0',

@@ -10,7 +10,7 @@ const Gallery = () => {
 
   return (
     <div >
-        <h1 className='text-center text-orange-400 font-extrabold text-3xl my-8'>Galary Featured</h1>
+        <h1 className='text-center text-orange-400 font-extrabold text-5xl my-10 md:my-20'>Galary Features</h1>
         <div className="grid grid-cols-3">
       <div className="h-96 carousel carousel-vertical rounded-box">
         <div className="carousel-item h-full" data-aos="fade-right">

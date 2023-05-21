@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SubCatagory = ({toy}) => {
-    const {pictureUrl, name, sellerName, sellerEmail, price, rating, quantity, description,}=toy
-    console.log(toy);
+    const {pictureUrl, name,_id, sellerName, sellerEmail, price, rating, quantity, description,}=toy
     return (
        
-<div className="w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div className="w-full max-w-sm p-2 bg-white border  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img className=" h-[500px]  rounded-t-xl" src={pictureUrl} alt="product image" />
     </a>
@@ -26,7 +25,7 @@ const SubCatagory = ({toy}) => {
         </div>
         <div className="flex items-center justify-between">
             <span className="text-3xl font-bold text-gray-900 dark:text-white">${price}</span>
-            <Link to={`/toy/${toy?._id}`}>
+            <Link to={`/toyDetails/${_id}`}>
             <button className='btn btn-info'>View Details</button>
           </Link>
         </div>

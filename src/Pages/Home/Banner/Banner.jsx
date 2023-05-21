@@ -6,6 +6,7 @@ const Banner = () => {
 
 
         <div className="carousel w-full h-[600px]  ">
+                
             <div id="slide1" className="carousel-item relative w-full ">
                 <div className="bg-center bg-no-repeat bg-[url('https://cdn11.bigcommerce.com/s-bfc1cbi7hy/images/stencil/original/carousel/7/slider-02.jpg?c=1')] ">
                     <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">

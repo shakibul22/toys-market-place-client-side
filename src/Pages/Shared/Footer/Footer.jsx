@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer grid grid-cols-2 md:grid-cols-3 p-2 md:p-5 bg-base-200 text-base-content">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
@@ -18,6 +18,12 @@ const Footer = () => {
                     <a className="link link-hover">Press kit</a>
                 </div>
                 <div>
+                    <span className="footer-title">Contact Us</span>
+                    <a className="link link-hover">+01999234546</a>
+                    <a className="link link-hover">+012455667675</a>
+                    <a className="link link-hover">Kid's Zone.com</a>
+                </div>
+                <div>
                     <span className="footer-title">Legal</span>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
@@ -27,7 +33,7 @@ const Footer = () => {
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
                     <img src="https://img.freepik.com/free-vector/different-kind-toys_1308-74241.jpg?w=900&t=st=1684511208~exp=1684511808~hmac=851a14b6a02b915dc4f2799b85d3b30d0f8d1b4cb26c758f698c8de4bd5a67e0" alt="" className="w-10 h-10 rounded-full" />
-                    <p>ACME Industries Ltd. <br />Providing reliable tech since 1992</p>
+                    <p>KID'S ZONE Industries Ltd. <br />Providing reliable tech since 1992</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">

@@ -6,6 +6,7 @@ import { Table } from 'flowbite-react';
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
+  const [searchText,setSearchText]=useState('')
 
   useEffect(() => {
     fetch('http://localhost:5000/allToys')
@@ -13,14 +14,14 @@ const AllToys = () => {
       .then(data => setAllToys(data))
   }, []);
 
-   // const handleSearch = () => {
-  //   fetch(`http://localhost:5000/getToysByText/${searchText}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setToys(data);
-  //     });
-  // };
+   const handleSearch = () => {
+    fetch(`http://localhost:5000/getToysByText/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setAllToys(data);
+      });
+  };
   console.log(allToys);
 
   return (
@@ -32,7 +33,7 @@ const AllToys = () => {
         <p className="p-3">The majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
       </div>
       <div className="search-box p-2 text-center">
-          <input type="text" className="p-1" /> <button className="shadow-xl bg-stone-500 px-3 py-1.5 rounded-md text-white">Search</button>
+          <input onChange={(e)=>setSearchText(e.target.value)} type="text" className="p-1" />{''} <button onClick={handleSearch} className="shadow-xl bg-stone-500 px-3 py-1.5 rounded-md text-white">Search</button>
           </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

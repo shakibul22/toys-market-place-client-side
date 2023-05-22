@@ -22,46 +22,23 @@ const [modalShow, setModalShow] = React.useState(false);
   }, [user]);
   console.log(allToys);
 
-  const handleDelete = (_id) => {
-    console.log('delete', _id);
-    fetch(`http://localhost:5000/myToys/${_id}`, {
-        method: 'DELETE',
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if (data.deletedCount > 0) {
-                alert('Deleted successfully');
-                const remaining = allToys.filter(toy => toy._id !== _id);
-                setAllToys(remaining);
-            }
-        }
+  
 
-        )
-}
-  // const handleSearch = () => {
-  //   fetch(`http://localhost:5000/getToysByText/${searchText}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setToys(data);
-  //     });
-  // };
-  // const handleToyUpdate = (data) => {
-  //   console.log(data);
-  //   fetch(`http://localhost:5000/updateToy/${data._id}`, {
-  //     method: "PUT",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(data),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       if (result.modifiedCount > 0) {
-  //         setControl(!control);
-  //       }
-  //       console.log(result);
-  //     });
-  // };
+  const handleToyUpdate = (data) => {
+    console.log(data);
+    fetch(`http://localhost:5000/updateToy/${data._id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setControl(!control);
+        }
+        console.log(result);
+      });
+  };
 
   return (
     <div  >

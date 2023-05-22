@@ -11,6 +11,7 @@ const Gallery = () => {
   return (
     <div >
         <h1 className='text-center text-orange-400 font-extrabold text-5xl my-10 md:my-20'>Galary Features</h1>
+        
         <div className="grid grid-cols-3">
       <div className="h-96 carousel carousel-vertical rounded-box">
         <div className="carousel-item h-full" data-aos="fade-right">
@@ -22,10 +23,10 @@ const Gallery = () => {
        
       </div>
       <div className="h-96 carousel carousel-vertical rounded-box">
-        <div className="carousel-item h-full" data-aos="fade-top">
+        <div className="carousel-item h-full" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
           <img src="https://th.bing.com/th/id/R.531c375b3c6073d3d2cb85bff1dac74d?rik=Ph%2bkJ9UIQUKJtg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f6%2fToy-PNG-Picture.png&ehk=YTpMNOhXiUy4bkpL%2bffqY%2bstakPM01gjpHab3WSyP%2bg%3d&risl=&pid=ImgRaw&r=0" alt="Gallery Image" />
         </div>
-        <div className="carousel-item h-full" data-aos="fade-top">
+        <div className="carousel-item h-full" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
           <img src="https://4.imimg.com/data4/KK/DH/MY-20986348/educational-toy-1000x1000.jpg" alt="Gallery Image" />
         </div>
         

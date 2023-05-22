@@ -4,6 +4,8 @@ const LatestToy = () => {
     return (
         <div className='mb-12'>
         <h2 className="text-orange-500 text-3xl text-center mb-9 font-bold mb-4">Our Latest Toys</h2>
+        <marquee  behavior="scroll" direction="left" ><span className="text-2xl font-semibold text-orange-300">Offer</span>-Free shipping on order $99</marquee>
+
 
             
 <div className="grid grid-cols-2 md:grid-cols-4 p-3 gap-4"style={{ backgroundImage: "url('https://images.pexels.com/photos/950241/pexels-photo-950241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}>

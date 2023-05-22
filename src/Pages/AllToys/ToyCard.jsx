@@ -3,7 +3,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const ToyCard = ({ toy }) => {
-  const { name,price,subCategory,sellerName,quantity} = toy;
+  const {_id, name,price,subCategory,sellerName,quantity} = toy;
   return (
     
       <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -24,8 +24,9 @@ const ToyCard = ({ toy }) => {
           {quantity}
         </td>
         <td className="px-6 py-4">
-          {/* <!-- Modal toggle --> */}
-          <a href="#" type="button" data-modal-show="editUserModal" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">view Details</a>
+        <Link to={`/toyDetails/${_id}`}>
+            <button className='btn btn-info'>View Details</button>
+          </Link>
         </td>
       </tr>
    

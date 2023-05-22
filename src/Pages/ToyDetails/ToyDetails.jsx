@@ -13,6 +13,7 @@ const ToyDetails = () => {
         //   setItem(findData); 
         })
     },[_id])
+    console.log(_id);
   
    
     return (

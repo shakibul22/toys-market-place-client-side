@@ -9,10 +9,8 @@ import MyToysCard from "./MyToysCard";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
-const [modalShow, setModalShow] = React.useState(false);
 
   const [searchText, setSearchText] = useState("");
-  const [control, setControl] = useState(false);
   useEffect(() => {
     fetch(`http://localhost:5000/myToys/${user?.email}`)
       .then((res) => res.json())
@@ -24,21 +22,7 @@ const [modalShow, setModalShow] = React.useState(false);
 
   
 
-  const handleToyUpdate = (data) => {
-    console.log(data);
-    fetch(`http://localhost:5000/updateToy/${data._id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.modifiedCount > 0) {
-          setControl(!control);
-        }
-        console.log(result);
-      });
-  };
+ 
 
   return (
     <div  >
@@ -92,22 +76,3 @@ const [modalShow, setModalShow] = React.useState(false);
 };
 
 export default MyToys;
-// {allToys?.map((toy, index) =>  ( <>
-//   <td>{toy.name}</td>
-//   <td>{toy.sellerName}</td>
-//   <td>{toy.category}</td>
-//   <td>{toy.price}</td>
-//   <td>{toy.rating}</td>
-//   <td>{toy.quantity}</td>
-//   <td><Link to={`/update/${toy._id}`}><button>Update</button></Link>
-//         </td>
-//   {/* <td><Button variant="primary" onClick={() => setModalShow(true)}> Edit</Button>
-//     <UpdateModal show={modalShow} onHide={() => setModalShow(false)} toy={toy} andletoyUpdate={handletoyUpdate} />
-//   </td> */}
-//   <td>
-   
-//      <button onClick={() => handleDelete(toy._id)}>X</button>
-//   </td>
-// </>)
-
-// )}

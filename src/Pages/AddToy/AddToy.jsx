@@ -18,11 +18,8 @@ const AddToy = () => {
 
     const handleAddToy = (event) => {
         event.preventDefault();
-      
-
-
+ 
         const subCategoryData = { pictureUrl, name, sellerName:user?.displayName, subCategory, sellerEmail:user?.email, price, rating, quantity, description, };
-        console.log(subCategoryData);
 
         fetch('http://localhost:5000/PostToy', {
             method: 'POST',
@@ -103,6 +100,7 @@ const AddToy = () => {
                        Sub-category:
                     </label>
                     <select className='w-full border border-gray-300 rounded px-3 py-2' value={subCategory} onChange={(e) => setSubCategory(e.target.value)}>
+                        <option value="">select</option>
                         <option value='Mathematics Toys'>Mathematics Toys</option>
                         <option value='Science Toys'>Science Toys</option>
                         <option value='Language Toys'>Language Toys</option>

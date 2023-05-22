@@ -12,18 +12,31 @@ const AllToys = () => {
       .then(res => res.json())
       .then(data => setAllToys(data))
   }, []);
+
+   // const handleSearch = () => {
+  //   fetch(`http://localhost:5000/getToysByText/${searchText}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setToys(data);
+  //     });
+  // };
   console.log(allToys);
 
   return (
-    <div>
+    <div className='p-3 ' style={{ backgroundImage: "url('https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }} >
       <Title title="Blogs-Kid's Zone"></Title>
 
-      <div className="text-center mt-4">
+      <div className="text-center mt-4 ">
         <h2 className="text-orange-500 text-3xl font-bold mb-4">Our All Toys</h2>
         <p className="p-3">The majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
       </div>
+      <div className="search-box p-2 text-center">
+          <input type="text" className="p-1" /> <button className="shadow-xl bg-stone-500 px-3 py-1.5 rounded-md text-white">Search</button>
+          </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        
 
         <Table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

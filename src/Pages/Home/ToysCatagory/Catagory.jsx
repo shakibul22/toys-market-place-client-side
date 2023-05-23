@@ -1,29 +1,31 @@
 import { useEffect, useState } from 'react';
 import './Catagory.css'
-import SubCatagory from '../SubCatagory/SubCatagory';
+import SubCatagory from './SubCatagory';
+
+
 const Category = () => {
   const [toys, setToys] = useState([]);
   const [textColor, setTextColor] = useState('text-start text-5xl my-9 text-purple-600 font-bold');
   const [activeTab,setActiveTab]=useState('Mathematics Toys')
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys/${activeTab}`)
+    fetch(`https://toys-market-place-server.vercel.app/allToys/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setToys(result);
       },);
 
-    const interval = setInterval(() => {
-      setTextColor((prevColor) => {
-        if (prevColor === 'text-start text-5xl my-9 text-purple-600 font-bold') {
-          return 'text-start text-5xl my-9 text-red-600 font-bold'; // Change to red
-        } else {
-          return 'text-start text-5xl my-9 text-purple-600 font-bold'; // Change back to purple
-        }
-      });
-    }, 2000);
+    // const interval = setInterval(() => {
+    //   setTextColor((prevColor) => {
+    //     if (prevColor === 'text-start text-5xl my-9 text-purple-600 font-bold') {
+    //       return 'text-start text-5xl my-9 text-red-600 font-bold'; // Change to red
+    //     } else {
+    //       return 'text-start text-5xl my-9 text-purple-600 font-bold'; // Change back to purple
+    //     }
+    //   });
+    // }, 2000);
 
-    return () => clearInterval(interval); // Clear the interval when the component unmounts
+    // return () => clearInterval(interval); // Clear the interval when the component unmounts
   },[activeTab]);
 
   const slicedToys = toys.slice(0, 3); // Extract the first 4 toys from the array
@@ -65,9 +67,10 @@ const Category = () => {
           </button>
         </div>
       </div>
+      
       <div className="container grid grid-cols-1 md:grid-cols-3 mt-5 p-4 bg-purple-100">
         {slicedToys.map((toy) => (
-          <SubCatagory toy={toy} key={toy._id} />
+          <SubCatagory toy={toy} key={toy._id}></SubCatagory>
         ))}
       </div>
     </div>

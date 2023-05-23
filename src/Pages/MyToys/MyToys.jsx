@@ -12,7 +12,7 @@ const MyToys = () => {
 
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys/${user?.email}`)
+    fetch(`https://toys-market-place-server.vercel.app/myToys/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);

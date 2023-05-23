@@ -2,19 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const ToyDetails = () => {
-    const { _id } = useParams();
-    const [item, setItem] = useState();
+
+
+  const [toy, setToy] = useState({});
+
+    const { id } = useParams();
+
     useEffect(()=>{
-        fetch(`http://localhost:5000/toys/${_id}`)
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-        //     const findData=data.find((toy)=>toy._id===_id);
-        //   setItem(findData); 
-        })
-    },[_id])
-    console.log(_id);
+        fetch(`http://localhost:5000/details/${id}`)
+        .then(res => res.json())
+        .then(data => setToy(data))
+    })
+
+
+    console.log(toy)
+
+   
+  //   const { id } = useParams();
+  //   const [item, setItem] = useState(null);
   
+  //   useEffect(() => {
+  //     fetch(`http://localhost:5000/allToys/${id}`)
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setItem(data);
+  //       });
+  //   }, [id]);
+  
+  //   if (!item) {
+  //     return <p>Loading...</p>;
+  //   }
+  // console.log(_id);
    
     return (
         <div>

@@ -28,7 +28,7 @@ const UpdateModal = ({id}) => {
         const subCategoryData = { name, sellerName, subCategory,  price,  quantity,};
         console.log(subCategoryData);
 
-        fetch(`http://localhost:5000/updateToy/${id}`, {
+        fetch(`https://toys-market-place-server.vercel.app/updateToy/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(subCategoryData),

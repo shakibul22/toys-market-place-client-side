@@ -34,7 +34,7 @@ const Register = () => {
         form.reset();
   
         // Display success alert
-        swal('Success', 'User created successfully!', 'success');
+        Swal('Success', 'User created successfully!', 'success');
       })
       .catch((error) => {
         const errorMessage = error.message;

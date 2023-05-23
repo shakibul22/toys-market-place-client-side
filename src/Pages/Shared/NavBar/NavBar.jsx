@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom"
 import { AuthContext } from "../../../Providers/AuthProvider";
-import OfferPage from "../../Home/ReviewPage/ReviewPage";
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const handleLogout = () => {

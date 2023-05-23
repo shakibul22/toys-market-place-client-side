@@ -11,7 +11,7 @@ const MyToysCard = ({ toy }) => {
   const { _id, name, price, subCategory, sellerName, quantity } = toy;
   const handleDelete = (_id) => {
     console.log('delete', _id);
-    fetch(`http://localhost:5000/myToys/${_id}`, {
+    fetch(`https://toys-market-place-server.vercel.app/myToys/${_id}`, {
       method: 'DELETE',
     })
       .then(res => res.json())

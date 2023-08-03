@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+    import { Helmet } from 'react-helmet';
 
-const Title = ({ title}) => {
-    return (
-        <div>
-            <Helmet>
-                <title>{title}</title>
-            </Helmet>
-           
-        </div>
-    );
-};
+    const Title = ({ title}) => {
+        return (
+            <div>
+                <Helmet>
+                    <title>{title}</title>
+                </Helmet>
+            
+            </div>
+        );
+    };
 
-export default Title;
+    export default Title;

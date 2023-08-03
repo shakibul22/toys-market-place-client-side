@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Title from '../Title/Title';
 import swal from 'sweetalert';
-import Swal from 'sweetalert2';
 
 
 

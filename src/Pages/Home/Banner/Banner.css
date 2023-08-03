@@ -1,0 +1,16 @@
+#slide3,#slide2 {
+  background-image: url('https://cdn11.bigcommerce.com/s-bfc1cbi7hy/images/stencil/original/carousel/8/slider-01__62460.jpg?c=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+/* Media query for mobile devices */
+@media (max-width: 567px) {
+    #slide3,#slide2,#slide1 {
+    width: 100%;
+    height: 70%;
+    }
+  }

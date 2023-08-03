@@ -1,7 +1,10 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import swal from "sweetalert";
+
+import React, { useContext, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+import swal from 'sweetalert';
+import Title from '../Title/Title';
+
 
 
 const Login = () => {
@@ -59,7 +62,7 @@ const Login = () => {
    
     return (
        <div className='flex flex-col md:flex-row sm:flex-col justify-content-center align-items-center  '>
-   
+    <Title title="Login-Kid's Zone"></Title>
 
          <form onSubmit={handleLogin} className="w-full md:w-[570px] mt-15 mb-10 p-10  bg-white rounded-lg text-black">
             <h3 className='text-2xl font-bold mb-5'>Login</h3>

@@ -1,39 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom"
 import { AuthContext } from "../../../Providers/AuthProvider";
-import { FaBeer, FaMoon, FaSun } from 'react-icons/fa';
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-  
-    const [darkMode, setDarkMode] = useState(false);
-  
-  
-    const [theme, setTheme] = useState(
-      localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
-    );
-  
-    useEffect(() => {
-      localStorage.setItem('theme', theme);
-      const localTheme = localStorage.getItem('theme');
-      document.querySelector('html').setAttribute('data-theme', localTheme);
-      if (localTheme === 'dark') {
-        setDarkMode(true);
-        document.body.style.backgroundColor = 'black';
-      } else {
-        setDarkMode(false);
-        document.body.style.backgroundColor = '';
-      }
-    }, [theme]);
-  
-  
-    const handleToggle = (e) => {
-      if (e.target.checked) {
-        setTheme('dark');
-      } else {
-        setTheme('light');
-      }
-    };
- 
     const handleLogout = () => {
         logOut()
             .then()
@@ -73,21 +42,13 @@ const NavBar = () => {
                     <li><NavLink to='/addToy' className='text-white'>Add Toy</NavLink> </li>
                     <li><NavLink to='/myToys' className='text-white'>My Toys</NavLink> </li>
                     <li><NavLink to='/allToys' className='text-white'>All Toys</NavLink> </li>
-                    <li><div className="">
-                  <label className="swap swap-rotate">
-                    {/* this hidden checkbox controls the state */}
-                    <input className="w-[1px] h-[1px] text-center items-center " type="checkbox"  onChange={handleToggle} />
-                    { darkMode ? <FaMoon className="text-2xl"/> :<FaSun className="text-2xl"/>}
-                  </label>
-                </div></li>
 
 
                 </ul>
             </div>
             <div className="navbar-end">
                 {user ?
-                    <div className="dropdown dropdown-end flex">
-                           
+                    <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img src={user.photoURL} />

@@ -43,13 +43,14 @@ const selectSortType = (e) =>{
         <p className="p-3">The majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
       </div>
       
-      <div className="search-box p-2 text-center flex justify-between">
+      <div className="search-box p-2 text-center">
 
 
 
-          <select className='w-1/4 border border-gray-300 rounded px-3 py-2' 
+          <select className='w-full border border-gray-300 rounded px-3 py-2' 
           // value={subCategory} onChange={(e) => setSubCategory(e.target.value)}
            onChange={(e) => selectSortType(e)}
+          //  onSelect={() => selectSortType()}
           >
               <option value="">select</option>
               <option value='ascending'>Ascending</option>
@@ -57,7 +58,7 @@ const selectSortType = (e) =>{
           </select>
 
 
-         <div> <input onChange={(e)=>setSearchText(e.target.value)} type="text" className="p-1 " /> <button onClick={handleSearch} className="shadow-xl bg-stone-500 px-3 py-1.5 rounded-md text-white">Search</button></div>
+          <input onChange={(e)=>setSearchText(e.target.value)} type="text" className="p-1" />{''} <button onClick={handleSearch} className="shadow-xl bg-stone-500 px-3 py-1.5 rounded-md text-white">Search</button>
           </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

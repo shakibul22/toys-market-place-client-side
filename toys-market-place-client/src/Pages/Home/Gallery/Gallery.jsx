@@ -14,10 +14,10 @@ const Gallery = () => {
         
         <div className="grid grid-cols-3">
       <div className="h-96 carousel carousel-vertical rounded-box">
-        <div className="carousel-item h-full" data-aos="fade-zoom-in">
+        <div className="carousel-item h-full" data-aos="fade-right">
           <img src="https://qph.fs.quoracdn.net/main-qimg-a5d9d84b4574efa3da28586cbfd88ad2-c" alt="Gallery Image" />
         </div>
-        <div className="carousel-item h-full" data-aos="fade-zoom-in">
+        <div className="carousel-item h-full" data-aos="fade-right">
           <img src="https://babyjourney.net/wp-content/uploads/2020/05/word-image-28.png" alt="Gallery Image" />
         </div>
        
@@ -32,11 +32,11 @@ const Gallery = () => {
         
       </div>
       <div className="h-96 carousel carousel-vertical rounded-box">
-        <div className="carousel-item h-full" data-aos="fade-zoom-in">
+        <div className="carousel-item h-full" data-aos="fade-left">
           <img src="https://lifestyle.co.uk/public/images/hero/img_hero-toys-rubiks.jpg" alt="Gallery Image" />
         </div>
       
-        <div className="carousel-item h-full" data-aos="fade-zoom-in">>
+        <div className="carousel-item h-full" data-aos="fade-left">
           <img src="https://images3.alphacoders.com/268/thumb-350-26839.jpg" alt="Gallery Image" />
         </div>
        
